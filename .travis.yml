@@ -20,7 +20,7 @@ jobs:
       script:
         - docker pull wmfs/node:lts-alpine
     - stage: pull request
-      if: (type = pull_request AND commit_message =~ /(feat|fix|perf|ci|build)(.*):/)
+      if: type = pull_request
       install:
         - npm install
       script:
