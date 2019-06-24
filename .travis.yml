@@ -14,7 +14,7 @@ stages:
 jobs:
   include:
     - stage: branch
-      if: if: (branch != master AND commit_message =~ /(feat|fix|perf|ci|build)(.*):/)
+      if: (branch != master AND commit_message =~ /(feat|fix|perf|ci|build)(.*):/)
       install:
         - npm install
       script:
